@@ -58,7 +58,7 @@ class TelegramBot:
     # Log messages from users
     def logging(self, update: Update, user_id, prompt):
         now = datetime.datetime.now()
-        formatted_now = now.strftime("%H:%M:%S")
+        formatted_now = now.strftime("%Y-%m-%d %H:%M:%S")
         user_id = update.message.from_user.id    
         log_name = 'message_log.json'
         log_entry = {'user_id': user_id,'message_text': prompt, 'timestamp': formatted_now}
